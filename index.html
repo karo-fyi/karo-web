@@ -58,18 +58,21 @@
     .project {
       border: 1px solid #ddd;
       border-radius: 4px;
-      padding: 1.25rem 1.5rem;
+      padding: 0;
       background: #fff;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .project:not(.wip):hover {
+      box-shadow: 0 0 0 3px #cc220033;
+      border-color: #cc220066;
     }
 
     .project a {
       text-decoration: none;
       color: inherit;
       display: block;
-    }
-
-    .project a:hover .project-name {
-      text-decoration: underline;
+      padding: 1.25rem 1.5rem;
     }
 
     .project-name {
@@ -89,6 +92,7 @@
       opacity: 0.45;
       cursor: not-allowed;
       background: #f5f5f5;
+      padding: 1.25rem 1.5rem;
     }
 
     .project.wip .project-name::after {
