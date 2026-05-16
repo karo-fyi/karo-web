@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>karo.fyi</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f9f7f4;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo svg {
+      width: 64px;
+      height: 64px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      color: #1a1a1a;
+    }
+
+    .tagline {
+      max-width: 480px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 3rem;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project a:hover .project-name {
+      text-decoration: underline;
+    }
+
+    .project-name {
+      font-size: 1.05rem;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .project.wip {
+      opacity: 0.45;
+      cursor: not-allowed;
+      background: #f5f5f5;
+    }
+
+    .project.wip .project-name::after {
+      content: ' — work in progress';
+      font-weight: normal;
+      font-family: Georgia, serif;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Karo diamond">
+        <polygon points="50,4 96,50 50,96 4,50" fill="#cc2200"/>
+      </svg>
+    </div>
+    <h1>karo.fyi</h1>
+  </header>
+
+  <p class="tagline">
+    Small, minimal software — written in C, in spare time, as needed.
+    Each tool exists because I needed it, and because writing it was
+    a good way to learn.
+  </p>
+
+  <div class="projects">
+
+    <div class="project">
+      <a href="https://github.com/karo-fyi/krode">
+        <div class="project-name">krode</div>
+        <div class="project-desc">
+          Delete onboard recordings from the Rode Interview PRO wireless
+          microphone transmitter on Linux — without needing Rode's proprietary software.
+        </div>
+      </a>
+    </div>
+
+    <div class="project wip">
+      <div class="project-name">httpd</div>
+      <div class="project-desc">
+        A minimal HTTP server written from scratch in C.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Jerko Cilas &mdash; BSD 2-Clause
+  </footer>
+
+</body>
+</html>
